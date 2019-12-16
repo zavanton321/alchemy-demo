@@ -21,6 +21,6 @@ class Address(Base):
     person = relationship(Person)
 
 
-engine = create_engine("sqlite:///sqlalchemy_example.db")
+engine = create_engine('mysql+pymysql://test-user:test-password@localhost/demo_alchemy')
 
 Base.metadata.create_all(engine)
